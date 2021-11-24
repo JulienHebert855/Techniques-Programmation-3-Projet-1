@@ -1,0 +1,27 @@
+<div class="items2">
+    <mat-card *ngFor="let TypeForfaits of tableauForfaits" class="forfait-container">
+        <mat-card-header>
+            <mat-card-title>Forfait complet - En provenance de {{TypeForfaits.villeDepart}} vers
+                {{TypeForfaits.destination}}</mat-card-title>
+            <img mat-card-image src="../../assets/Halifax_Grand.jpg" alt="Halifax">
+        </mat-card-header>
+
+        <mat-card-content class="forfait-items">
+            <p><strong>Destination : </strong>{{TypeForfaits.destination}}</p>
+            <p><strong>Ville de départ : </strong>{{TypeForfaits.villeDepart}}</p>
+            <p><strong>Nom de l'hôtel : </strong>{{TypeForfaits.hotel.nom}} - {{TypeForfaits.hotel.nombreEtoiles}}
+                étoiles - {{TypeForfaits.hotel.nombreChambres}} chambres</p>
+            <p><strong>Adresse de l'hôtel : </strong>{{TypeForfaits.hotel.coordonnees}}</p>
+            <app-etoiles></app-etoiles>
+            <ul>
+                <li>{{TypeForfaits.hotel.caracteristiques}}</li>
+            </ul>
+
+            <p><strong>Date de départ : </strong>{{TypeForfaits.dateDepart}}</p>
+            <p><strong>Date de retour : </strong>{{TypeForfaits.dateRetour}}</p>
+            <p><strong>Durée : </strong>7 jours</p>
+            <p class="barre"><strong>Prix régulier : </strong>{{TypeForfaits.prix}} $</p>
+            <p><strong>Prix en rabais : </strong>{{TypeForfaits.rabais}} $</p>
+        </mat-card-content>
+    </mat-card>
+</div>
